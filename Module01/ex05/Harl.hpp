@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 19:39:39 by smia              #+#    #+#             */
-/*   Updated: 2022/08/03 00:25:55 by smia             ###   ########.fr       */
+/*   Created: 2022/08/04 06:00:00 by smia              #+#    #+#             */
+/*   Updated: 2022/08/04 06:09:38 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
 
-int main ()
+#include <iostream>
+
+class Harl
 {
-	Zombie	z1("said");
-	z1.announce();
-	randomChump("adam");
-}
+    private:
+        void debug(void);
+        void info(void);
+        void warning(void);
+        void error(void);
+    public:
+        Harl();
+        ~Harl();
+        void complain(std::string level);
+};
+
+#endif

@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/22 14:33:54 by smia              #+#    #+#             */
-/*   Updated: 2022/07/22 16:58:37 by smia             ###   ########.fr       */
+/*   Created: 2022/08/02 20:05:53 by smia              #+#    #+#             */
+/*   Updated: 2022/08/03 01:28:02 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void    randomChump(std::string name)
+void randomChump(std::string name)
 {
-	Zombie *z3 = newZombie(name);
-	z3->announce();
-	delete z3;
+    Zombie *z2 = newZombie(name);
+    z2->announce();
+    delete z2;
 }

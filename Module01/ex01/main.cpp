@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 19:39:39 by smia              #+#    #+#             */
-/*   Updated: 2022/08/03 00:25:55 by smia             ###   ########.fr       */
+/*   Created: 2022/08/03 00:44:09 by smia              #+#    #+#             */
+/*   Updated: 2022/08/03 01:37:07 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int main ()
 {
-	Zombie	z1("said");
-	z1.announce();
-	randomChump("adam");
+    Zombie *z;
+
+    z = zombieHorde(3,"Said");
+    if (z != NULL)
+        delete [] z;
 }

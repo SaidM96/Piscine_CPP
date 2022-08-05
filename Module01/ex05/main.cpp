@@ -5,16 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 19:39:39 by smia              #+#    #+#             */
-/*   Updated: 2022/08/03 00:25:55 by smia             ###   ########.fr       */
+/*   Created: 2022/08/05 05:27:37 by smia              #+#    #+#             */
+/*   Updated: 2022/08/05 05:55:59 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-int main ()
+int main()
 {
-	Zombie	z1("said");
-	z1.announce();
-	randomChump("adam");
+	Harl func;
+
+	func.complain("DEBUG");
+	func.complain("INFO");
+	func.complain("ERROR");
+	func.complain("WARNING");
+	func.complain("RANDOM TEXT");
 }

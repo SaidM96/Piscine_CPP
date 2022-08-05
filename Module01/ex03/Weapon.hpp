@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 19:39:39 by smia              #+#    #+#             */
-/*   Updated: 2022/08/03 00:25:55 by smia             ###   ########.fr       */
+/*   Created: 2022/08/03 01:53:08 by smia              #+#    #+#             */
+/*   Updated: 2022/08/03 03:31:41 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-int main ()
+#include <iostream>
+
+class Weapon
 {
-	Zombie	z1("said");
-	z1.announce();
-	randomChump("adam");
-}
+    private:
+        std::string type;
+    public:
+        const std::string& getType(void);
+        void setType(std::string new_type);
+        Weapon(std::string type);
+        ~Weapon();
+};
+
+#endif

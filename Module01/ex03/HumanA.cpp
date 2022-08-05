@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 19:39:39 by smia              #+#    #+#             */
-/*   Updated: 2022/08/03 00:25:55 by smia             ###   ########.fr       */
+/*   Created: 2022/08/03 02:43:38 by smia              #+#    #+#             */
+/*   Updated: 2022/08/03 03:37:32 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-int main ()
+HumanA::HumanA(std::string name, Weapon& wp) : wpA(wp)
 {
-	Zombie	z1("said");
-	z1.announce();
-	randomChump("adam");
+    this->name = name;
+}
+
+void HumanA::setWeapon(Weapon& wp)
+{
+    this->wpA = wp;
+}
+
+void HumanA::attack(void)
+{
+    std::cout << name << " attacks with their " << wpA.getType() << std::endl;
+}
+
+HumanA::~HumanA()
+{
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/22 14:34:01 by smia              #+#    #+#             */
-/*   Updated: 2022/07/22 16:59:38 by smia             ###   ########.fr       */
+/*   Created: 2022/08/02 19:39:59 by smia              #+#    #+#             */
+/*   Updated: 2022/08/02 19:58:46 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Zombie
         std::string name;
     public:
         void announce(void);
+        Zombie(std::string name);
         ~Zombie();
-	    Zombie(std::string name);
 };
 
 void randomChump(std::string name);

@@ -5,16 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 19:39:39 by smia              #+#    #+#             */
-/*   Updated: 2022/08/03 00:25:55 by smia             ###   ########.fr       */
+/*   Created: 2022/08/05 05:27:37 by smia              #+#    #+#             */
+/*   Updated: 2022/08/05 06:20:13 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-int main ()
+int main(int ac, char **av)
 {
-	Zombie	z1("said");
-	z1.announce();
-	randomChump("adam");
+	Harl func;
+
+	if (ac != 2 || !av[1])
+	{
+		std::cout << "Worng input!" << std::endl;
+		return (1);
+	}
+	func.complain(av[1]);
+	return (0);
 }

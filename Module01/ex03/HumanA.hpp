@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/02 19:39:39 by smia              #+#    #+#             */
-/*   Updated: 2022/08/03 00:25:55 by smia             ###   ########.fr       */
+/*   Created: 2022/08/03 02:15:29 by smia              #+#    #+#             */
+/*   Updated: 2022/08/03 02:50:27 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
-int main ()
+#include <iostream>
+#include "Weapon.hpp"
+
+class HumanA
 {
-	Zombie	z1("said");
-	z1.announce();
-	randomChump("adam");
-}
+    private:
+        std::string name;
+        Weapon& wpA;
+    public:
+        void setWeapon(Weapon& wp);
+        HumanA(std::string name, Weapon& wp);
+        void attack(void);
+        ~HumanA();
+};
+
+#endif
