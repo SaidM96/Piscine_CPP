@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 05:27:37 by smia              #+#    #+#             */
-/*   Updated: 2022/08/05 05:55:59 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/06 04:24:29 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int main()
 
 	func.complain("DEBUG");
 	func.complain("INFO");
-	func.complain("ERROR");
 	func.complain("WARNING");
-	func.complain("RANDOM TEXT");
+	func.complain("ERROR");
 }

@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 04:01:57 by smia              #+#    #+#             */
-/*   Updated: 2022/08/04 21:26:02 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/06 04:15:11 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int main(int ac, char **av)
     while(getline(infile, line))
     {
         index = line.find(av[2]);
-       
         while (index >= 0)
         {
             line.erase(index, len1);
@@ -51,7 +50,6 @@ int main(int ac, char **av)
         outfile << line;
         outfile << std::endl;
     }
-    outfile << std::endl;
     outfile.close();
     infile.close();
     return 0;

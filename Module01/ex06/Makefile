@@ -4,7 +4,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 SRCS =  main.cpp\
 		Harl.cpp\
-		
+
 OBJT = $(SRCS:.cpp=.o)
 
 
