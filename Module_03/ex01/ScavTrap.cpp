@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 15:18:57 by smia              #+#    #+#             */
-/*   Updated: 2022/08/13 18:19:38 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/14 22:01:03 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ ScavTrap::ScavTrap(ScavTrap& c)
 
 void ScavTrap::operator=(ScavTrap& c)
 {
-    std::cout << "Copy assignment ClapTrap operator called" << std::endl;
+    std::cout << "Copy assignment ScavTrap operator called" << std::endl;
     this->Name = c.Name;
     this->pv = c.pv;
     this->energie = c.energie;

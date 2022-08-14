@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:05:21 by smia              #+#    #+#             */
-/*   Updated: 2022/08/13 22:18:37 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/14 22:00:15 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 ClapTrap::ClapTrap(int pv, int energ, int damage)
 {
+    std::cout << "ClapTrap constructor called"<< std::endl;
     this->pv = pv;
     this->energie = energ;
     this->damage = damage;

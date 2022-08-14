@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 14:05:21 by smia              #+#    #+#             */
-/*   Updated: 2022/08/12 23:49:04 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/14 19:03:24 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,10 @@ void ClapTrap::takeDamage(unsigned int amount)
         if (this->pv <= 0)
         {
             this->pv = 0;
-            std::cout << "ClapTrap " << this->Name  " died!" << std:: endl;
+            std::cout << "ClapTrap " << this->Name << " died!" << std:: endl;
         }
+    }
 }
-   
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
