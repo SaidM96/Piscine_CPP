@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 20:11:10 by smia              #+#    #+#             */
-/*   Updated: 2022/08/15 00:42:57 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/15 19:03:56 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,22 @@
 
 int main()
 {
-    DiamondTrap a("said");
-    DiamondTrap b("adam");
-    DiamondTrap c(b);
+	DiamondTrap warrior1("warrior1");
+	DiamondTrap warrior2("warrior2");
+	DiamondTrap warrior3(warrior1);
 
-    c = a;
-    a.attack("adam");
-    b.takeDamage(30);
-    a.whoAmI();
+	warrior2.attack("warrior1");
+	warrior1.takeDamage(20);
+	warrior3 = warrior2;
+	warrior1.beRepaired(20);
+	for(int i = 0; i < 4; i++)
+	{
+		warrior3.attack("warrior2");
+		warrior3.beRepaired(20);
+    	warrior2.takeDamage(20);
+		warrior2.attack("warrior3");
+		warrior2.beRepaired(20);
+    	warrior3.takeDamage(20);
+	}
+    warrior1.whoAmI();
 }
