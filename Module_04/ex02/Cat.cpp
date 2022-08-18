@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 17:31:15 by smia              #+#    #+#             */
-/*   Updated: 2022/08/18 02:32:31 by smia             ###   ########.fr       */
+/*   Created: 2022/08/15 17:55:57 by smia              #+#    #+#             */
+/*   Updated: 2022/08/18 00:30:24 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog() : Animal("Dog")
+Cat::Cat() : Animal("cat")
 {
     br = new Brain;
     if (br == NULL)
@@ -20,38 +20,37 @@ Dog::Dog() : Animal("Dog")
 		std::cout << "allocation failed " << std::endl;
 		exit (EXIT_FAILURE);
 	}
-    type = "Dog";
-    br->setIdea("haw");
-    std::cout << "Dog default constructor called" << std::endl;
+    type = "Cat";
+    std::cout << "Cat default constructor called" << std::endl;
 }
 
-Dog::Dog(Dog const &cp)
+Cat::Cat(Cat const &cp)
 {
-    br = new Brain;
+    this->br = new Brain;
     if (br == NULL)
 	{
 		std::cout << "allocation failed " << std::endl;
 		exit (EXIT_FAILURE);
 	}
-    *br = *cp.br;
+    *br = *(cp.br);
     this->type = cp.type;
-    std::cout << "Dog Copy constructor called"<< std::endl;
+    std::cout << "Cat Copy constructor called"<< std::endl;
 }
 
-void Dog::operator=(Dog const &cp)
+void Cat::operator=(Cat const &cp)
 {
-    *br = *cp.br;
+    *br = *(cp.br);
     this->type = cp.type;
-    std::cout << "Dog assignment operator called" << std::endl;
+    std::cout << "Cat assignment operator called" << std::endl;
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
     delete br;
-    std::cout << "Dog Destructor called"<< std::endl;
+    std::cout << "Cat Destructor called"<< std::endl;
 }
 
-void Dog::makeSound(void) const
+void Cat::makeSound(void) const
 {
-    std::cout << "hawhawhaw" << std::endl;
+    std::cout << "Miaw Miaw" << std::endl;
 }

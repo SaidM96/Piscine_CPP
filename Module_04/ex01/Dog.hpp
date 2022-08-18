@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:26:53 by smia              #+#    #+#             */
-/*   Updated: 2022/08/16 03:55:39 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/17 19:40:14 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
+    private:
+        Brain* br;
     public:
         Dog();
-        Dog(Dog& x);
-        void operator=(Dog& x);
+        Dog(Dog const &cp);
+        void operator=(Dog const &cp);
         ~Dog();
         void makeSound(void) const;
 };

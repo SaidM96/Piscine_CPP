@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:31:15 by smia              #+#    #+#             */
-/*   Updated: 2022/08/18 02:32:31 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/18 00:30:34 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Dog::Dog() : Animal("Dog")
 		exit (EXIT_FAILURE);
 	}
     type = "Dog";
-    br->setIdea("haw");
     std::cout << "Dog default constructor called" << std::endl;
 }
 

@@ -1,23 +1,21 @@
-NAME = poly
+NAME = Abstract
 
 SRCS =  main.cpp\
-		Animal.cpp\
-		Dog.cpp\
-		Cat.cpp\
-		WrongCat.cpp\
-		WrongAnimal.cpp\
+        Cat.cpp\
+        Dog.cpp\
+        Animal.cpp\
+		Brain.cpp\
 
 CC = c++
 
 FLAGS =  -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
-LIB =	Animal.hpp\
+
+LIB =	Cat.hpp\
 		Dog.hpp\
-		Cat.hpp\
-		WrongCat.hpp\
-		WrongAnimal.hpp\
-		
+		Animal.hpp\
+		Brain.hpp
 
 OBJT = $(SRCS:.cpp=.o)
 

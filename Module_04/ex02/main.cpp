@@ -6,13 +6,14 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:56:50 by smia              #+#    #+#             */
-/*   Updated: 2022/08/18 02:30:09 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/18 01:52:06 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+
 
 int main()
 {
@@ -34,7 +35,6 @@ int main()
 		        std::cout << "allocation failed " << std::endl;
 		        exit (EXIT_FAILURE);
 	        }
-            
         }
         else
         {
@@ -55,3 +55,4 @@ int main()
         delete X[i];
     return (0);
 }
+

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 04:06:44 by smia              #+#    #+#             */
-/*   Updated: 2022/08/16 23:20:08 by smia             ###   ########.fr       */
+/*   Created: 2022/08/15 17:55:26 by smia              #+#    #+#             */
+/*   Updated: 2022/08/18 02:04:33 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef Cat_HPP
+#define Cat_HPP
 
+#include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Brain
+class Cat : public Animal
 {
-    protected:
-        std::string ideas[100];
-    public :
-        Brain();
-        ~Brain();
-        Brain(Brain const &cp);
-        void operator=(Brain const &cp);
-        Brain(std::string idea);
-        void setIdea(std::string idea);
-        std::string* getIdea(void);
+    private:
+        Brain* br;
+    public:
+        Cat();
+        Cat(Cat const &cp);
+        void operator=(Cat const &cp);
+        ~Cat();
+        void makeSound(void) const;
 };
 
 #endif

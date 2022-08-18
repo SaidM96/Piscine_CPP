@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:15:10 by smia              #+#    #+#             */
-/*   Updated: 2022/08/16 03:55:54 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/17 01:55:48 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal
         Animal(Animal& x);
         void operator=(Animal& x);
         virtual ~Animal();
-        virtual void  makeSound(void) const; 
+        virtual void  makeSound(void) const;
         std::string getType(void) const;
         void setType(std::string newType);
 };

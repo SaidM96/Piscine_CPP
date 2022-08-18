@@ -1,29 +1,38 @@
 NAME = Animal
-CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
-RM = rm -f
+
 SRCS =  main.cpp\
-		Animal.cpp\
-		Dog.cpp\
-		Cat.cpp\
-		WrongCat.cpp\
-		WrongAnimal.cpp\
+        Cat.cpp\
+        Dog.cpp\
+        Animal.cpp\
+		Brain.cpp\
+
+CC = c++
+
+FLAGS =  -Wall -Wextra -Werror -std=c++98
+
+RM = rm -f
+
+LIB =	Cat.hpp\
+		Dog.hpp\
+		Animal.hpp\
+		Brain.hpp
 
 OBJT = $(SRCS:.cpp=.o)
 
-
-$(NAME): $(OBJT)
+$(NAME): $(OBJT) $(LIB)
 	$(CC) $(OBJT) $(FLAGS) -o $(NAME)
 
-$(OBJT): $(SRCS)
-	$(CC) $(FLAGS) -c  $(SRCS)
+%.o : %.cpp $(LIB)
+	$(CC) $(FLAGS) -o $@ -c $<
 
 all : $(NAME)
+
 clean:
 	$(RM) $(OBJT)
+
 fclean:
 	$(RM) $(OBJT) $(NAME)
 
-re:	clean all
+re:	fclean all
 
 .PHONY: all fclean clean re
