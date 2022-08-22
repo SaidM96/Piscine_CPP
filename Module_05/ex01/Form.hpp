@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 00:15:53 by smia              #+#    #+#             */
-/*   Updated: 2022/08/21 02:26:39 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/22 00:49:36 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ class Form
         int  get_grade_ex(void);
         std::string isSigned(void);
         std::string const get_name(void);
-        
         class GradeTooHighException : public std::exception
 		{
 

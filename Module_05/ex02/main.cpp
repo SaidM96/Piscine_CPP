@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 20:16:18 by smia              #+#    #+#             */
-/*   Updated: 2022/08/21 10:31:15 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/22 01:40:12 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int main()
     Bureaucrat a("said", 150);
     Bureaucrat c("safi", 32);
     Bureaucrat q("King", 10);
-    ShrubberyCreationForm b("aaaa");
+    ShrubberyCreationForm b("home");
     b.beSigned(a);
     b.execute(a);
-    RobotomyRequestForm d("adam");
+    RobotomyRequestForm d("robot");
     d.beSigned(c);
     d.execute(c);
     PresidentialPardonForm s("wiwiw");

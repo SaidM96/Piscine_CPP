@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 20:16:31 by smia              #+#    #+#             */
-/*   Updated: 2022/08/19 21:58:13 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/22 00:37:45 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,18 @@ class Bureaucrat
 
         class GradeTooHighException : public std::exception
 		{
-
 			public:
 				    GradeTooHighException(){}
-                    virtual const char* what() const throw()
+                    const char* what() const throw()
                     {
                         return "Grade is too high , max grade is 1";
                     }
         };
         class GradeTooLowException : public std::exception 
 		{
-
 			public:
 				    GradeTooLowException() {}
-                    virtual const char* what() const throw()
+                    const char* what() const throw()
                     {
                         return "Grade too low , min grade is 150";
                     }

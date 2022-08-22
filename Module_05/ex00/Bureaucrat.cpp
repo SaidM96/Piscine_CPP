@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 20:16:38 by smia              #+#    #+#             */
-/*   Updated: 2022/08/19 21:11:19 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/22 00:31:48 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Bureaucrat::Bureaucrat() : name("X")
 {
-    this->grade = 1;
+    this->grade = 75;
 }
 
 Bureaucrat::Bureaucrat(std::string const Name, int gr) : name(Name)
@@ -26,7 +26,6 @@ Bureaucrat::Bureaucrat(std::string const Name, int gr) : name(Name)
             this->grade = 1;
             throw GradeTooHighException();
         }
-            
         else if (gr > 150 )
         {
             this->grade = 150;
@@ -50,7 +49,6 @@ Bureaucrat::Bureaucrat(Bureaucrat& cp) : name(cp.name)
             this->grade = 1;
             throw GradeTooHighException();
         }
-            
         else if (cp.grade > 150 )
         {
             this->grade = 150;
