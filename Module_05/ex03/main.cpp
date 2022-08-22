@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 20:16:18 by smia              #+#    #+#             */
-/*   Updated: 2022/08/22 05:03:15 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/22 06:53:09 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ int main()
     
     Shrubbery = stagair2.makeForm("dsadwq", "Shrubebery");
     Shrubbery = stagair1.makeForm("shrubbery creation", "Shrubebery");
+    Shrubbery->execute(br2);
     Shrubbery->beSigned(br1);
     Shrubbery->execute(br1);
-    Shrubbery->execute(br2);
-    std::cout << *Shrubbery << std::endl;
+    std::cout << std::endl;
+
     Form *president;
     president = stagair2.makeForm("dsadwq", "president");
     president = stagair1.makeForm("presidential pardon", "president");
-    president->execute(br1);
+    president->execute(br2);
     president->beSigned(br1);
     president->execute(br2);
     president->execute(br1);
-
-
+    std::cout << std::endl;
 
     Form *robot;
     robot = stagair2.makeForm("dsadwq", "robot");
