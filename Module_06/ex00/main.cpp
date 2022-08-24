@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 01:22:37 by smia              #+#    #+#             */
-/*   Updated: 2022/08/23 10:11:03 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/24 09:29:18 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main(int ac, char **av)
         return (1);
     }
     type = get_type(av[1]);
+    std::cout << type << std::endl;
     switch (type)
     {
         case 0:

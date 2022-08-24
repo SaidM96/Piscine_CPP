@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 04:01:02 by smia              #+#    #+#             */
-/*   Updated: 2022/08/24 06:22:35 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/24 09:35:02 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	print_char(int c)
 {
 	std::cout << "char: ";
 	if (c < 0 || c > 126)
-		std::cout << "impssible";
+		std::cout << "impossible";
 	else if (c < 30)
 		std::cout << "Non displayable";
 	else
@@ -51,7 +51,7 @@ void FloatPrint(char *str)
     if (c == static_cast<int>(c))
         print_char(static_cast<int>(c));
     else
-        std::cout << "char: " << "impssible" << std::endl;
+        std::cout << "char: " << "impossible" << std::endl;
     std::cout << "int: " << static_cast<int> (c) << std::endl;
     std::cout << "float: " <<  c << "f" <<  std::endl;
     std::cout << "double: " << static_cast<double> (c) <<std::endl;
@@ -68,7 +68,7 @@ void DoublePrint(char *str)
     if (c == static_cast<int>(c))
         print_char(static_cast<int>(c));
     else
-        std::cout << "char: " << "impssible" << std::endl;
+        std::cout << "char: " << "impossible" << std::endl;
     std::cout << "int: " << static_cast<int> (c) << std::endl;
     std::cout << "float: " <<  static_cast<float> (c) << "f" <<  std::endl;
     std::cout << "double: " << c <<std::endl;
@@ -78,8 +78,8 @@ void    infFloatPrint(char *str)
 {
     std::string inf(str);
             
-    std::cout << "char: " << "impssible" << std::endl;
-    std::cout << "int: "  << "impssible" <<std::endl;
+    std::cout << "char: " << "impossible" << std::endl;
+    std::cout << "int: "  << "impossible" <<std::endl;
     std::cout << "float: " << inf <<  std::endl;
     std::cout << "double: " << inf.erase(strlen(str) - 1, strlen(str))<< std::endl;
 }
@@ -88,8 +88,8 @@ void infDoublePrint(char *str)
 {
     std::string inf(str);
             
-    std::cout << "char: " << "impssible" << std::endl;
-    std::cout << "int: "  << "impssible" <<std::endl;
+    std::cout << "char: " << "impossible" << std::endl;
+    std::cout << "int: "  << "impossible" <<std::endl;
     std::cout << "float: " << inf << "f" <<  std::endl;
     std::cout << "double: " << inf << std::endl;    
 }

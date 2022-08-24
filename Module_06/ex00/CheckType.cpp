@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 01:44:24 by smia              #+#    #+#             */
-/*   Updated: 2022/08/24 06:16:30 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/24 09:34:19 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ bool infDouble(char *str)
     return false;
 }
 
-bool ft_isdigit(char c)
+bool ft_isdigit(int c)
 {
-    if (c < '0' || c > '9')
-        return (false);
-    return (true);
+	if (c >= '0' && c <= '9')
+		return (true);
+	return (false);
 }
 
 bool isChar(char *str)
@@ -40,6 +40,8 @@ bool isChar(char *str)
     if (strlen(str) != 1)
         return false;
     if (*str < 32 || *str == 127)
+        return false;
+    if (ft_isdigit(*str))
         return false;
     return true;
 }
@@ -63,7 +65,7 @@ bool isInt(char *str)
 
 bool isFloat(char *str)
 {
-    int i = -1;
+    int i = 0;
     bool point = false;
 
     if (infFloat(str))
@@ -97,7 +99,7 @@ bool isFloat(char *str)
 
 bool isDouble(char *str)
 {
-    int i = -1;
+    int i = 0;
     bool point = false;
 
     if (infDouble(str))
