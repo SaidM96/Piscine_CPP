@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 01:44:24 by smia              #+#    #+#             */
-/*   Updated: 2022/08/23 09:44:01 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/24 06:16:30 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ bool isInt(char *str)
 
     int i = 0;
 
-    if (str[i] == '+' || '-')
+    if (str[i] == '+' || str[i] == '-')
         i++;
     while (str[i])
     {
@@ -68,7 +68,7 @@ bool isFloat(char *str)
 
     if (infFloat(str))
         return (true);
-    if (str[i] == '+' || '-')
+    if (str[i] == '+' || str[i] == '-')
         i++;
     while (str[i])
     {
@@ -102,7 +102,7 @@ bool isDouble(char *str)
 
     if (infDouble(str))
         return true;
-    if (str[i] == '+' || '-')
+    if (str[i] == '+' || str[i] == '-')
         i++;
     while (str[i])
     {
