@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 10:50:21 by smia              #+#    #+#             */
-/*   Updated: 2022/08/23 11:08:30 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/23 23:58:00 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class A : public Base
 };
 
 class B : public Base
-{ 
+{
 };
 
 class C : public Base
@@ -34,4 +34,6 @@ class C : public Base
 };
 
 Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);
 #endif
