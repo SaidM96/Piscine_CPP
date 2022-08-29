@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 18:19:20 by smia              #+#    #+#             */
-/*   Updated: 2022/08/28 17:07:19 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/29 16:38:01 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void Span::operator=(Span const &cp)
     N = cp.N;
 }
 
-Span::Span(int n)
+Span::Span(unsigned int n)
 {
     if (n > 0)
         N = n;

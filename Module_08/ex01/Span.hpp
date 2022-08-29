@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 18:07:13 by smia              #+#    #+#             */
-/*   Updated: 2022/08/28 16:00:12 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/29 16:37:45 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Span
 {
     private:
         std::vector<int>    integers;
-        int                 N;
+        unsigned int        N;
     public:
         Span();
-        Span(int n);
+        Span(unsigned int n);
         Span(Span const &cp);
         void operator=(Span const &cp);
         ~Span();

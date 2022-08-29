@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:15:07 by smia              #+#    #+#             */
-/*   Updated: 2022/08/16 03:12:48 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/25 10:50:36 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void Animal::operator=(Animal& x)
 
 Animal::~Animal()
 {
+
     std::cout << "Animal Destructor called"<< std::endl;
 }
 

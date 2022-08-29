@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 02:18:46 by smia              #+#    #+#             */
-/*   Updated: 2022/08/22 06:56:48 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/26 09:49:30 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int Intern::checkForm(std::string &namef)
     return (3);
 }
 
-Form* Intern::makeForm(std::string nameForm, std::string target)
+Form* Intern::  makeForm(std::string nameForm, std::string target)
 {
     Form* ret = NULL;
 

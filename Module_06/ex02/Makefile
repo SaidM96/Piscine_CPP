@@ -1,17 +1,15 @@
-NAME = Identify
+NAME = Array
 
 SRCS =  main.cpp\
-		Base.cpp\
+		Array.cpp\
 
 CC = c++
 
 FLAGS =  -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
-LIB =	Base.hpp\
-
+LIB =	Array.hpp\
 		
-
 OBJT = $(SRCS:.cpp=.o)
 
 $(NAME): $(OBJT) $(LIB)

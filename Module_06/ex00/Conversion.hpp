@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 01:23:04 by smia              #+#    #+#             */
-/*   Updated: 2022/08/23 09:45:02 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/24 12:01:31 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ bool isInt(char *str);
 
 // Print Conversion types
 void CharPrint(char *c);
-void IntPrint(int c);
+void IntPrint(double c);
 void FloatPrint(char *str);
 void DoublePrint(char *str);
 void infFloatPrint(char *str);

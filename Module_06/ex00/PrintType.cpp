@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 04:01:02 by smia              #+#    #+#             */
-/*   Updated: 2022/08/24 09:35:02 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/24 12:11:49 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ void CharPrint(char *c)
     std::cout << "double: " << static_cast<double> (*c) << ".0"<<std::endl;
 }
 
-void IntPrint(int c)
-{
+void IntPrint(double c)
+{ 
     print_char(c);
-    std::cout << "int: " << c << std::endl;
-    std::cout << "float: " << static_cast<float> (c) << "f" <<  std::endl;
-    std::cout << "double: " << static_cast<double> (c) <<std::endl;
+    std::cout << "int: " << static_cast<int>(c) << std::endl;
+    std::cout << "float: " << static_cast<float> (c) << ".0f" <<  std::endl;
+    std::cout << "double: " << c << ".0" <<std::endl;
 }
 
 void FloatPrint(char *str)

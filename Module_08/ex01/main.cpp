@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 14:37:44 by smia              #+#    #+#             */
-/*   Updated: 2022/08/28 17:08:28 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/29 16:09:28 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,10 @@ int main()
 		std::cout << sp5.longestSpan() << std::endl;
 		std::cout << std::endl;
 
-		Span sp = Span(1000000);
+		Span sp = Span(100000);
 		std::vector<int> nums;
 		srand(time(NULL));
-		for (int i = 0; i < 10000; i++)
+		for (int i = 0; i < 100000; i++)
 		{
 			nums.push_back(rand());
 		}

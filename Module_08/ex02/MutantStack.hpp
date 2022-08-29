@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:13:49 by smia              #+#    #+#             */
-/*   Updated: 2022/08/29 11:58:43 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/29 16:17:27 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@
 #include <stack>
 #include <list>
 #include <deque>
-#include <algorithm>
 
-
-template <typename T, class Cont = std::deque<T> >
-class MutantStack : public  std::stack<T, Cont>
+template <typename T>
+class MutantStack : public  std::stack<T>
 {
     public:
         MutantStack(){}
@@ -29,11 +27,11 @@ class MutantStack : public  std::stack<T, Cont>
         ~MutantStack(){}
         MutantStack &operator=(const MutantStack &cp)
         {
-            std::stack<T, Cont>::operator=(cp);
+            std::stack<T>::operator=(cp);
 			return *this;
         }
-        typedef typename Cont::iterator iterator;
-        typedef typename Cont::const_iterator const_iterator;
+        typedef typename std::stack<T>::container_type::iterator iterator;
+        typedef typename std::stack<T>::container_type::const_iterator const_iterator;
         iterator begin(){return this->c.begin();}
         const_iterator cbegin(){return this->c.cbegin();}
         iterator end(){return this->c.end();}

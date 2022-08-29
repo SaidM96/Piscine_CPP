@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 01:44:24 by smia              #+#    #+#             */
-/*   Updated: 2022/08/24 09:34:19 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/24 11:51:44 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,11 @@ bool isInt(char *str)
 
     if (str[i] == '+' || str[i] == '-')
         i++;
+    if (str[0] == '0' && ft_isdigit(str[1]))
+        return (false);
     while (str[i])
     {
+                
         if (ft_isdigit(str[i]))
             i++;
         else
@@ -94,6 +97,8 @@ bool isFloat(char *str)
                 break ;
         }
     }
+    if (point == false || str[i] != 'f')
+        return (false);
     return (true);
 }
 
@@ -101,7 +106,6 @@ bool isDouble(char *str)
 {
     int i = 0;
     bool point = false;
-
     if (infDouble(str))
         return true;
     if (str[i] == '+' || str[i] == '-')
@@ -121,5 +125,7 @@ bool isDouble(char *str)
             i++;
         }
     }
-    return (true);
+    if (point == false)
+        return (false);
+     return (true);
 }
