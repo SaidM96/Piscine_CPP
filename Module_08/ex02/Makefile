@@ -1,7 +1,6 @@
 NAME = Mutated
 
 SRCS =  main.cpp\
-		MutantStack.cpp\
 
 CC = c++
 

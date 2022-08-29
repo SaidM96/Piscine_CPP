@@ -6,7 +6,7 @@
 /*   By: smia <smia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:13:49 by smia              #+#    #+#             */
-/*   Updated: 2022/08/28 19:05:56 by smia             ###   ########.fr       */
+/*   Updated: 2022/08/29 11:58:43 by smia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,28 @@
 #include <iostream>
 #include <stack>
 #include <list>
+#include <deque>
+#include <algorithm>
 
-template <typename T, class D = std::deque<T> > 
-class MutantStack : public std::stack<T, D>
+
+template <typename T, class Cont = std::deque<T> >
+class MutantStack : public  std::stack<T, Cont>
 {
     public:
-        MutantStack() : MutantStack<T>::stack(){}
-        MutantStack(MutantStack const &cp): MutantStack<T, D>::stack(cp){}
-        ~MutantStack();
-        MutantStack<T, D> &operator=(MutantStack const &cp)
+        MutantStack(){}
+        MutantStack(MutantStack const &cp){*this = cp;}
+        ~MutantStack(){}
+        MutantStack &operator=(const MutantStack &cp)
         {
-            MutantStack<T>::stack::operator=(cp);
+            std::stack<T, Cont>::operator=(cp);
 			return *this;
         }
-        typedef typename MutantStack<T,D>::stack::container_type::iterator iterator;
-        typedef typename MutantStack<T,D>::stack::container_type::const_iterator const_iterator;
-        iterator begin(){return this->d.begin();}
-        const_iterator cbegin(){return this->D.cbegin();}
-        iterator end(){return this->D.end();}
-        const_iterator cend(){return this->D.cend();}
-        
-        
+        typedef typename Cont::iterator iterator;
+        typedef typename Cont::const_iterator const_iterator;
+        iterator begin(){return this->c.begin();}
+        const_iterator cbegin(){return this->c.cbegin();}
+        iterator end(){return this->c.end();}
+        const_iterator cend(){return this->c.cend();}
 };
 
 #endif
