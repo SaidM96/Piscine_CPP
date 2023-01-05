@@ -1,6 +1,4 @@
 # Piscine_CPP
-# CPP-Module-08 | 1337 Khouribga
-
 Easy find 🔍
 
 <p align="center">
